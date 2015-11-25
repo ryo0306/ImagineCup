@@ -5,6 +5,13 @@
 #include <list>
 #define UIBOX_HEIGHT WINDOW_WIDTH/5 - 50
 #define UIBOX_WIDTH WINDOW_WIDTH/3 -20
+#define SELECT_MATERIAL_NUM 2
+
+
+
+//TODO:選択できる素材を３つに増やす
+//     それを汎用的にする
+//TODO:選択したものを枠で表示
 
 struct CreateCombination
 {
@@ -43,9 +50,9 @@ private:
   Font font = Font("res/meiryo.ttc");
   Vec2f mousePos;
   Color color[12];
-  Color frameColor[2];
+  Color frameColor[SELECT_MATERIAL_NUM];
   char* monster;
-  char* material[2];
+  char* material[SELECT_MATERIAL_NUM];
   std::vector<CreateCombination> pattern;
 
 };

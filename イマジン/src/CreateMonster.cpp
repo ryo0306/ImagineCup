@@ -15,7 +15,7 @@ void CreateMonster::SetUp()
   str[9] = "小麦粉";
   str[10] = "小麦粉";
   str[11] = "小麦粉";
-  for (int i = 0; i < 2; i++)
+  for (int i = 0; i < SELECT_MATERIAL_NUM; i++)
   {
     material[i] = "空";
   }
@@ -30,7 +30,7 @@ void CreateMonster::Draw()
   font.size(30);
 
   // 選択した素材
-  for (int i = 0; i < 2; i++)
+  for (int i = 0; i < SELECT_MATERIAL_NUM; i++)
   {
     drawFillBox(i * 200-180, 100, UIBOX_WIDTH, UIBOX_HEIGHT, Color::white);
     drawBox(i * 200 - 180, 100, UIBOX_WIDTH, UIBOX_HEIGHT, 5, frameColor[i]);
@@ -71,7 +71,7 @@ void CreateMonster::Update()
 //TODO:ネストが深いので改良の余地あり
 void CreateMonster::Select()
 {
-  for (int i = 0; i < 2; i++)
+  for (int i = 0; i < SELECT_MATERIAL_NUM; i++)
   {
     if (Collision(Vec2f(i * 200 - 180, 100), Vec2f(UIBOX_WIDTH, UIBOX_HEIGHT), mousePos, Vec2f(1, 1)))
     {
