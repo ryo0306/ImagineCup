@@ -5,7 +5,7 @@ int main() {
 
   App::get();
 
-  //CreateAction mazeru;
+  CreateAction mazeru;
   CreateMonster gousei;
 
   gousei.SetUp();

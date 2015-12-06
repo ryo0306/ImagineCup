@@ -73,9 +73,9 @@ void CreateAction::SetDefAngle()
 
 void CreateAction::Acceleration()
 {
-  if (defAngle < angle)
+  if (defAngle - angle < -0.3)
     speed += ACCELERATION;
-  else if (defAngle > angle)
+  else if (defAngle - angle > 0.3)
     speed -= ACCELERATION;
 }
 
